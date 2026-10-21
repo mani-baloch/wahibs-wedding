@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wahib & Antal — Wedding Celebration | Save The Date</title>
+  <meta name="description"
+    content="With the blessings of Allah Almighty and the love of our families, we joyfully invite you to celebrate the wedding of Wahib Maqbool & Antal Hayaat.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="assets/floral_wreath.jpg">
+
+  <!-- Google Fonts: Cormorant Garamond, Cinzel, Outfit, Montserrat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400;1,600&family=Montserrat:wght@300;400;500;600&family=Outfit:wght@300;400;500;600;700&family=Amiri:ital,wght@0,400;0,700;1,400&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="top">
+
+  <!-- Top Floating Music Control Only -->
+  <div class="top-floating-bar">
+    <button id="audioToggleBtn" class="floating-btn audio-btn" title="Ambient Wedding Music"
+      aria-label="Toggle Wedding Music">
+      <i class="fa-solid fa-volume-high"></i>
+      <span class="btn-text">Music <span class="music-state">ON</span></span>
+    </button>
+  </div>
+
+  <!-- SECTION 1: HERO BADGE (Signature Tilda Style) -->
+  <header class="tilda-hero" id="hero">
+    <div class="hero-backdrop-gradient"></div>
+    <div class="particles-container" id="particles"></div>
+
+    <div class="hero-crest-container fade-in-up">
+      <div class="wreath-frame-wrapper">
+        <img src="assets/floral_wreath.jpg" alt="Botanical Olive & Floral Crest" class="wreath-img">
+        <div class="wreath-inner-card">
+          <p class="wreath-eyebrow">The Wedding Celebration</p>
+          <h1 class="wreath-title">You’re Invited!</h1>
+          <p class="wreath-subtitle">Join us in making this day unforgettable!</p>
+          <a href="#invitation" class="tilda-pill-btn">
+            <span>Discover the details</span>
+            <i class="fa-solid fa-arrow-down-long"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-scroll-indicator">
+      <span>Scroll to explore</span>
+      <div class="scroll-mouse">
+        <div class="mouse-wheel"></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- SECTION 2: FORMAL INVITATION & BISMILLAH -->
+  <section class="section invitation-section" id="invitation">
+    <div class="container text-center">
+
+      <!-- Bismillah Arabic Calligraphy -->
+      <div class="bismillah-wrapper reveal-item">
+        <div class="arabic-calligraphy" title="Bismillah-ir-Rahman-ir-Raheem">
+          بِسْمِ ٱللّٰهِ ٱلرَّحْمٰنِ ٱلرَّحِيْمِ
+        </div>
+        <div class="gold-flourish">
+          <span class="flourish-line"></span>
+          <i class="fa-regular fa-heart"></i>
+          <span class="flourish-line"></span>
+        </div>
+        <p class="bismillah-translit">Bismillah-ir-Rahman-ir-Raheem</p>
+      </div>
+
+      <div class="invitation-intro reveal-item">
+        <p class="blessing-text">
+          With the blessings of Allah Almighty and the love of our families, we joyfully invite you to celebrate the
+          beginning of our new journey together.
+        </p>
+      </div>
+
+      <!-- Couple Names Grand Display -->
+      <div class="couple-title-card reveal-item">
+        <span class="eyebrow-tag">A Beautiful Beginning to Forever</span>
+        <h2 class="couple-names">
+          <span class="name-highlight">Wahib Maqbool</span>
+          <span class="ampersand">&</span>
+          <span class="name-highlight">Antal Hayaat</span>
+        </h2>
+        <p class="couple-tagline">
+          <em>Two hearts, one beautiful journey, and a lifetime of love.</em>
+        </p>
+      </div>
+
+      <!-- Date & Venue Highlight Box -->
+      <div class="wedding-quick-info reveal-item">
+        <div class="info-pill">
+          <i class="fa-regular fa-calendar-check"></i>
+          <div>
+            <span class="info-label">Wedding Date</span>
+            <strong id="displayWeddingDate">November 20, 2026</strong>
+          </div>
+        </div>
+        <div class="info-pill-divider"></div>
+        <div class="info-pill">
+          <i class="fa-solid fa-location-dot"></i>
+          <div>
+            <span class="info-label">Venue</span>
+            <strong>Nishat Chunian Limited, Lahore, Pakistan</strong>
+          </div>
+        </div>
+      </div>
+
+      <!-- Countdown Timer -->
+      <div class="countdown-container reveal-item">
+        <h3 class="countdown-heading">Counting Down to Our Forever</h3>
+        <div class="countdown-grid" id="countdownGrid">
+          <div class="countdown-unit">
+            <span class="unit-number" id="countDays">00</span>
+            <span class="unit-label">Days</span>
+          </div>
+          <div class="countdown-sep">:</div>
+          <div class="countdown-unit">
+            <span class="unit-number" id="countHours">00</span>
+            <span class="unit-label">Hours</span>
+          </div>
+          <div class="countdown-sep">:</div>
+          <div class="countdown-unit">
+            <span class="unit-number" id="countMins">00</span>
+            <span class="unit-label">Minutes</span>
+          </div>
+          <div class="countdown-sep">:</div>
+          <div class="countdown-unit">
+            <span class="unit-number" id="countSecs">00</span>
+            <span class="unit-label">Seconds</span>
+          </div>
+        </div>
+
+        <div class="invitation-actions">
+          <button class="gold-outline-btn" id="saveTheDateBtn">
+            <i class="fa-solid fa-calendar-plus"></i>
+            <span>Save The Date (Add to Calendar)</span>
+          </button>
+          <a href="#rsvp" class="gold-filled-btn">
+            <i class="fa-solid fa-envelope-open-text"></i>
+            <span>RSVP Attendance</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 3: OUR WEDDING CELEBRATIONS (Baraat & Walima) -->
+  <section class="section celebrations-section" id="events">
+    <div class="container">
+
+      <div class="section-header text-center reveal-item">
+        <span class="section-badge">Events Program</span>
+        <h2 class="section-title">Our Wedding Celebrations</h2>
+        <p class="section-subtitle">
+          We would be delighted to have you with us as we celebrate our special moments with family, friends, love, and
+          laughter.
+        </p>
+      </div>
+
+      <div class="events-grid two-column-grid">
+
+        <!-- EVENT 01: BARAAT -->
+        <article class="event-card featured-event reveal-item" data-event="baraat">
+          <div class="event-image-box">
+            <img src="assets/baraat.jpg" alt="Baraat Celebration" class="event-img">
+            <span class="event-number-tag">01</span>
+            <div class="event-color-indicator baraat-color-bar" title="Theme Colors: Royal Red, Gold, Ivory"></div>
+          </div>
+          <div class="event-body">
+            <div class="event-tag-row">
+              <span class="event-pill baraat-pill">Baraat Ceremony</span>
+              <span class="theme-mood">The Main Event</span>
+            </div>
+            <h3 class="event-name">01 — Baraat</h3>
+            <h4 class="event-tagline">The Beginning of Forever</h4>
+            <p class="event-desc">
+              With the blessings of our loved ones, we invite you to witness the most beautiful chapter of our lives as
+              two families come together in celebration.
+            </p>
+
+            <div class="event-meta-list">
+              <div class="meta-item">
+                <i class="fa-regular fa-calendar"></i>
+                <div>
+                  <span class="meta-title">Date</span>
+                  <strong class="meta-val">Friday, Nov 20, 2026</strong>
+                </div>
+              </div>
+              <div class="meta-item">
+                <i class="fa-regular fa-clock"></i>
+                <div>
+                  <span class="meta-title">Time</span>
+                  <strong class="meta-val">07:30 PM Onwards</strong>
+                </div>
+              </div>
+              <div class="meta-item">
+                <i class="fa-solid fa-location-dot"></i>
+                <div>
+                  <span class="meta-title">Venue</span>
+                  <strong class="meta-val">Nishat Chunian Limited, Lahore</strong>
+                </div>
+              </div>
+            </div>
+
+            <div class="event-card-actions">
+              <a href="#rsvp" class="event-rsvp-link" onclick="preselectEvent('Baraat')">
+                <span>RSVP for Baraat</span>
+                <i class="fa-solid fa-chevron-right"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- EVENT 02: WALIMA -->
+        <article class="event-card reveal-item" data-event="walima">
+          <div class="event-image-box">
+            <img src="assets/walima.jpg" alt="Walima Celebration" class="event-img">
+            <span class="event-number-tag">02</span>
+            <div class="event-color-indicator walima-color-bar"
+              title="Theme Colors: Pastel Rose, Champagne, Soft Neutrals"></div>
+          </div>
+          <div class="event-body">
+            <div class="event-tag-row">
+              <span class="event-pill walima-pill">Walima Reception</span>
+              <span class="theme-mood">Gratitude & Duas</span>
+            </div>
+            <h3 class="event-name">02 — Walima</h3>
+            <h4 class="event-tagline">A Celebration of New Beginnings</h4>
+            <p class="event-desc">
+              Please join us for a joyful gathering as we celebrate our union and begin our new life together with
+              gratitude, happiness, and the duas of our loved ones.
+            </p>
+
+            <div class="event-meta-list">
+              <div class="meta-item">
+                <i class="fa-regular fa-calendar"></i>
+                <div>
+                  <span class="meta-title">Date</span>
+                  <strong class="meta-val">Saturday, Nov 21, 2026</strong>
+                </div>
+              </div>
+              <div class="meta-item">
+                <i class="fa-regular fa-clock"></i>
+                <div>
+                  <span class="meta-title">Time</span>
+                  <strong class="meta-val">08:00 PM Onwards</strong>
+                </div>
+              </div>
+              <div class="meta-item">
+                <i class="fa-solid fa-location-dot"></i>
+                <div>
+                  <span class="meta-title">Venue</span>
+                  <strong class="meta-val">Nishat Chunian Limited, Lahore</strong>
+                </div>
+              </div>
+            </div>
+
+            <div class="event-card-actions">
+              <a href="#rsvp" class="event-rsvp-link" onclick="preselectEvent('Walima')">
+                <span>RSVP for Walima</span>
+                <i class="fa-solid fa-chevron-right"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: WEDDING TIMELINE -->
+  <section class="section timeline-section" id="timeline">
+    <div class="container">
+
+      <div class="section-header text-center reveal-item">
+        <span class="section-badge">Schedule</span>
+        <h2 class="section-title">Wedding Timeline</h2>
+        <p class="section-subtitle">
+          Your presence will make every moment special.
+        </p>
+      </div>
+
+      <div class="timeline-stepper">
+
+        <div class="timeline-step reveal-item">
+          <div class="step-time">06:00 PM</div>
+          <div class="step-marker">
+            <div class="step-dot"></div>
+          </div>
+          <div class="step-content">
+            <div class="step-icon"><i class="fa-solid fa-door-open"></i></div>
+            <h3 class="step-title">Guest Arrival</h3>
+            <p class="step-desc">Welcome drinks, warm greetings, and seating as guests arrive at the venue.</p>
+          </div>
+        </div>
+
+        <div class="timeline-step reveal-item">
+          <div class="step-time">07:00 PM</div>
+          <div class="step-marker">
+            <div class="step-dot"></div>
+          </div>
+          <div class="step-content">
+            <div class="step-icon"><i class="fa-solid fa-users"></i></div>
+            <h3 class="step-title">Family Welcome</h3>
+            <p class="step-desc">Traditional family reception, milni, and exchange of fragrant rose garlands.</p>
+          </div>
+        </div>
+
+        <div class="timeline-step reveal-item highlight-step">
+          <div class="step-time">07:30 PM</div>
+          <div class="step-marker">
+            <div class="step-dot"></div>
+          </div>
+          <div class="step-content">
+            <div class="step-icon"><i class="fa-solid fa-ring"></i></div>
+            <h3 class="step-title">Wedding Ceremony</h3>
+            <p class="step-desc">The sacred Nikah vows, duas, and formal union in the presence of loved ones.</p>
+          </div>
+        </div>
+
+        <div class="timeline-step reveal-item">
+          <div class="step-time">08:30 PM</div>
+          <div class="step-marker">
+            <div class="step-dot"></div>
+          </div>
+          <div class="step-content">
+            <div class="step-icon"><i class="fa-solid fa-camera-retro"></i></div>
+            <h3 class="step-title">Photography & Greetings</h3>
+            <p class="step-desc">Stage photography with the couple, congratulations, and capturing cherished memories.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-step reveal-item highlight-step">
+          <div class="step-time">09:00 PM</div>
+          <div class="step-marker">
+            <div class="step-dot"></div>
+          </div>
+          <div class="step-content">
+            <div class="step-icon"><i class="fa-solid fa-utensils"></i></div>
+            <h3 class="step-title">Dinner</h3>
+            <p class="step-desc">A lavish Pakistani royal banquet featuring traditional delicacies and desserts.</p>
+          </div>
+        </div>
+
+        <div class="timeline-step reveal-item">
+          <div class="step-time">10:30 PM</div>
+          <div class="step-marker">
+            <div class="step-dot"></div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="timeline-note text-center reveal-item">
+        <i class="fa-solid fa-circle-info"></i>
+        <span>Please check the individual event details for the confirmed schedule.</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 5: DRESS CODE (Baraat & Walima) -->
+  <section class="section dresscode-section" id="dresscode">
+    <div class="container">
+
+      <div class="section-header text-center reveal-item">
+        <span class="section-badge">Attire Guide</span>
+        <h2 class="section-title">Dress Code</h2>
+        <p class="section-subtitle">
+          Celebrate in Style, the Pakistani Way
+        </p>
+      </div>
+
+      <div class="dresscode-grid two-column-grid">
+
+        <!-- Baraat Card -->
+        <div class="dress-card reveal-item">
+          <div class="dress-card-header baraat-header">
+            <i class="fa-solid fa-gem"></i>
+            <h3>01 — Baraat</h3>
+          </div>
+          <div class="palette-swatches">
+            <span class="swatch" style="background:#6B0F1A;" title="Royal Maroon"></span>
+            <span class="swatch" style="background:#C5A880;" title="Antique Gold"></span>
+            <span class="swatch" style="background:#1C2541;" title="Midnight Navy"></span>
+            <span class="swatch" style="background:#E0D0C1;" title="Ivory Champagne"></span>
+          </div>
+          <p class="dress-desc">
+            <strong>Formal Pakistani attire</strong>, including royal lehengas, shararas, heavily embroidered sherwanis,
+            and elegant traditional formal suits.
+          </p>
+          <div class="dress-suggestions">
+            <span>Sherwani</span>
+            <span>Royal Lehenga</span>
+            <span>Formal Tuxedo</span>
+          </div>
+        </div>
+
+        <!-- Walima Card -->
+        <div class="dress-card reveal-item">
+          <div class="dress-card-header walima-header">
+            <i class="fa-solid fa-feather-pointed"></i>
+            <h3>02 — Walima</h3>
+          </div>
+          <div class="palette-swatches">
+            <span class="swatch" style="background:#E8D8D8;" title="Blush Rose"></span>
+            <span class="swatch" style="background:#B7C4B7;" title="Sage Mist"></span>
+            <span class="swatch" style="background:#DCD6CD;" title="Powder Beige"></span>
+            <span class="swatch" style="background:#93A8AC;" title="Dusty Blue"></span>
+          </div>
+          <p class="dress-desc">
+            <strong>Sophisticated formal wear</strong> in delicate pastel shades, soft neutrals, champagne tones, and
+            elegant subtle traditional designs.
+          </p>
+          <div class="dress-suggestions">
+            <span>Pastel Maxi</span>
+            <span>Designer Suit</span>
+            <span>Silk Saree</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="dresscode-footer-note text-center reveal-item">
+        <p><em>We encourage everyone to dress comfortably and celebrate with us in their own beautiful style.</em></p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 6: KINDLY RSVP (DIRECT ROUTING TO WHATSAPP & EMAIL) -->
+  <section class="section rsvp-section" id="rsvp">
+    <div class="container">
+
+      <div class="rsvp-card-wrapper reveal-item">
+
+        <div class="rsvp-header text-center">
+          <span class="section-badge">Confirmation</span>
+          <h2 class="section-title">Kindly RSVP</h2>
+          <p class="section-subtitle">
+            Your presence means the world to us. Please let us know if you will be joining our celebrations so we can
+            make the necessary arrangements.
+          </p>
+          <div class="rsvp-deadline-badge">
+            <i class="fa-regular fa-clock"></i>
+            <span>Kindly RSVP by <strong>November 10, 2026</strong></span>
+          </div>
+        </div>
+
+        <form id="rsvpForm" class="luxury-rsvp-form">
+
+          <div class="form-grid">
+
+            <!-- Full Name -->
+            <div class="form-group">
+              <label for="rsvpName" class="form-label">
+                <i class="fa-solid fa-user"></i> Full Name <span class="req">*</span>
+              </label>
+              <input type="text" id="rsvpName" name="name" class="form-input" placeholder="e.g. Tariq Mehmood & Family"
+                required>
+            </div>
+
+            <!-- Phone / WhatsApp -->
+            <div class="form-group">
+              <label for="rsvpPhone" class="form-label">
+                <i class="fa-brands fa-whatsapp"></i> WhatsApp / Phone Number <span class="req">*</span>
+              </label>
+              <input type="tel" id="rsvpPhone" name="phone" class="form-input" placeholder="e.g. +92 300 1234567"
+                required>
+            </div>
+
+            <!-- Number of Guests -->
+            <div class="form-group">
+              <label for="rsvpGuests" class="form-label">
+                <i class="fa-solid fa-users"></i> Number of Guests Attending <span class="req">*</span>
+              </label>
+              <select id="rsvpGuests" name="guests" class="form-select" required>
+                <option value="1">1 Person (Just Me)</option>
+                <option value="2" selected>2 Persons (Couple)</option>
+                <option value="3">3 Persons</option>
+                <option value="4">4 Persons</option>
+                <option value="5">5 Persons</option>
+                <option value="6+">6+ Persons (Family Group)</option>
+              </select>
+            </div>
+
+            <!-- Attendance Confirmation -->
+            <div class="form-group">
+              <label class="form-label">
+                <i class="fa-solid fa-circle-check"></i> Attendance Confirmation <span class="req">*</span>
+              </label>
+              <div class="radio-pill-group">
+                <label class="radio-pill">
+                  <input type="radio" name="attendance" value="Joyfully Accept" checked>
+                  <span class="pill-label"><i class="fa-solid fa-check"></i> Joyfully Accept</span>
+                </label>
+                <label class="radio-pill">
+                  <input type="radio" name="attendance" value="Regretfully Decline">
+                  <span class="pill-label"><i class="fa-solid fa-xmark"></i> Regretfully Decline</span>
+                </label>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Events Selection (Baraat & Walima) -->
+          <div class="form-group full-width">
+            <label class="form-label">
+              <i class="fa-solid fa-champagne-glasses"></i> Which events will you attend? <span class="req">*</span>
+            </label>
+            <div class="checkbox-pill-group">
+              <label class="check-pill">
+                <input type="checkbox" name="events" value="All Celebrations" id="checkAllEvents" checked>
+                <span class="pill-label"><i class="fa-solid fa-sparkles"></i> Both Celebrations (Baraat & Walima)</span>
+              </label>
+              <label class="check-pill">
+                <input type="checkbox" name="events" value="Baraat" id="checkBaraat" class="event-check">
+                <span class="pill-label">01 — Baraat</span>
+              </label>
+              <label class="check-pill">
+                <input type="checkbox" name="events" value="Walima" id="checkWalima" class="event-check">
+                <span class="pill-label">02 — Walima</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Dietary / Special Requirements -->
+          <div class="form-group full-width">
+            <label for="rsvpDietary" class="form-label">
+              <i class="fa-solid fa-utensils"></i> Any Dietary Requirements / Preferences
+            </label>
+            <input type="text" id="rsvpDietary" name="dietary" class="form-input"
+              placeholder="e.g. Vegetarian, Diabetics, High Chair for Child, etc.">
+          </div>
+
+          <!-- Personal Dua / Message -->
+          <div class="form-group full-width">
+            <label for="rsvpMessage" class="form-label">
+              <i class="fa-regular fa-comment-dots"></i> Message or Warm Duas for Wahib & Antal
+            </label>
+            <textarea id="rsvpMessage" name="message" class="form-textarea" rows="3"
+              placeholder="Share your heartfelt wishes or a loving prayer for the couple..."></textarea>
+          </div>
+
+          <!-- Direct Routing Submission Buttons (WhatsApp or Email) -->
+          <div class="rsvp-submit-box">
+
+            <button type="submit" id="submitWhatsappBtn" class="rsvp-primary-btn whatsapp-submit">
+              <i class="fa-brands fa-whatsapp"></i>
+              <span>SEND RSVP DIRECTLY VIA WHATSAPP</span>
+            </button>
+
+            <button type="button" id="submitEmailBtn" class="rsvp-secondary-btn email-submit">
+              <i class="fa-solid fa-envelope"></i>
+              <span>SEND RSVP DIRECTLY VIA EMAIL</span>
+            </button>
+
+          </div>
+
+          <p class="submit-note text-center">
+            <i class="fa-solid fa-circle-check"></i>
+            Clicking either option delivers your complete RSVP directly to the couple via WhatsApp or Email!
+          </p>
+
+        </form>
+
+        <!-- RSVP Success Confirmation Overlay -->
+        <div class="rsvp-success-banner" id="rsvpSuccessBanner" style="display:none;">
+          <div class="success-card">
+            <div class="success-check-icon">
+              <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <h3>JazakAllah Khair! RSVP Received!</h3>
+            <p id="successGuestSummary">Thank you for confirming your attendance. Your response has been sent to Wahib
+              & Antal.</p>
+            <div class="success-actions">
+              <button class="gold-outline-btn" onclick="resetRsvpForm()">Submit Another RSVP</button>
+              <a href="#events" class="gold-filled-btn">View Event Details</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 7: WEDDING VENUE & DIRECTIONS -->
+  <section class="section venue-section" id="venue">
+    <div class="container">
+
+      <div class="section-header text-center reveal-item">
+        <span class="section-badge">Location</span>
+        <h2 class="section-title">Wedding Venue</h2>
+        <p class="section-subtitle">
+          We look forward to welcoming you to our celebration.
+        </p>
+      </div>
+
+      <div class="venue-card reveal-item">
+        <div class="venue-info-box">
+          <div class="venue-icon"><i class="fa-solid fa-building-columns"></i></div>
+          <span class="venue-tag">Main Reception</span>
+          <h3 class="venue-name">Nishat Chunian Limited</h3>
+          <p class="venue-address">
+            <i class="fa-solid fa-map-pin"></i>
+            31 College Rd, Block Q Gulberg 2, Lahore, Pakistan
+          </p>
+
+          <div class="venue-perks">
+            <div class="perk"><i class="fa-solid fa-square-parking"></i> Dedicated Valet Parking</div>
+            <div class="perk"><i class="fa-solid fa-wheelchair"></i> Wheelchair Accessible</div>
+            <div class="perk"><i class="fa-solid fa-mosque"></i> Prayer Area Available</div>
+          </div>
+
+          <div class="venue-btn-group">
+            <a href="https://www.google.com/maps/search/Nishat%20Chunian%20Limited/@31.52344077,74.35550884,17z?hl=en"
+              target="_blank" rel="noopener noreferrer" class="gold-filled-btn">
+              <i class="fa-solid fa-location-arrow"></i>
+              <span>GET DIRECTIONS</span>
+            </a>
+            <a href="https://www.google.com/maps/search/Nishat%20Chunian%20Limited/@31.52344077,74.35550884,17z?hl=en"
+              target="_blank" rel="noopener noreferrer" class="gold-outline-btn">
+              <i class="fa-solid fa-diamond-turn-right"></i>
+              <span>Open in Google Maps</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="venue-map-box">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3401.0261846416274!2d74.35550884!3d31.52344077!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391904fef105b1ad%3A0x94b1ac55473722a5!2sNishat%20Chunian%20Limited!5e0!3m2!1sen!2s!4v1792619468708!5m2!1sen!2s"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin"></iframe>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 8: A FEW IMPORTANT DETAILS (FAQS) -->
+  <section class="section faq-section" id="faq">
+    <div class="container">
+
+      <div class="section-header text-center reveal-item">
+        <span class="section-badge">Guest Guide</span>
+        <h2 class="section-title">A Few Important Details</h2>
+        <p class="section-subtitle">
+          Everything you need to make your evening seamless and pleasant.
+        </p>
+      </div>
+
+      <div class="faq-accordion reveal-item">
+
+        <details class="faq-item" open>
+          <summary class="faq-question">
+            <span><i class="fa-solid fa-user-group"></i> Can I bring a guest?</span>
+            <i class="fa-solid fa-plus faq-toggle-icon"></i>
+          </summary>
+          <div class="faq-answer">
+            <p>We kindly request that you follow the number of guests mentioned in your personal wedding invitation card
+              or digital invite to help us ensure comfortable seating for everyone.</p>
+          </div>
+        </details>
+
+
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span><i class="fa-solid fa-phone-volume"></i> Who can I contact for assistance?</span>
+            <i class="fa-solid fa-plus faq-toggle-icon"></i>
+          </summary>
+          <div class="faq-answer">
+            <p>For any questions regarding the events, timings, directions, or special arrangements, please reach out
+              directly to our family wedding coordinators:</p>
+            <div class="coordinator-contacts">
+              <a href="tel:+923146173491" class="contact-pill">
+                <i class="fa-solid fa-phone"></i>
+                <span>Call: +92 314 6173491</span>
+              </a>
+              <a href="https://wa.me/923146173491" target="_blank" rel="noopener noreferrer"
+                class="contact-pill whatsapp-pill">
+                <i class="fa-brands fa-whatsapp"></i>
+                <span>WhatsApp Coordinator</span>
+              </a>
+            </div>
+          </div>
+        </details>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 9: WITH LOVE & DUAS (FOOTER) -->
+  <footer class="luxury-footer" id="footer">
+    <div class="footer-backdrop-pattern"></div>
+    <div class="container text-center">
+
+      <div class="footer-floral-crest reveal-item">
+        <img src="assets/floral_wreath.jpg" alt="A & A Monogram" class="footer-crest-img">
+      </div>
+
+      <div class="footer-content reveal-item">
+        <span class="footer-eyebrow">With Love & Duas</span>
+        <h2 class="footer-couple-names">Wahib Maqbool & Antal Hayaat</h2>
+
+        <p class="footer-message">
+          Thank you for being a part of our lives and for sharing in the happiness of our special day.<br>
+          Your love, blessings, and prayers mean more to us than words can express.
+        </p>
+
+        <div class="footer-grand-callout">
+          <h3>We can't wait to celebrate with you!</h3>
+        </div>
+
+        <div class="islamic-prayer-card">
+          <p class="prayer-arabic">اللَّهُمَّ بَارِكْ لَهُمَا وَبَارِكْ عَلَيْهِمَا وَاجْمَعْ بَيْنَهُمَا فِي خَيْرٍ</p>
+          <p class="prayer-english">
+            <em>"May Allah bless our journey together with love, happiness, and barakah. Ameen."</em>
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <p class="copyright-text">
+          &copy; 2026 Wahib Maqbool & Antal Hayaat | Made with Love
+        </p>
+        <a href="#top" class="back-to-top-btn" title="Back to top">
+          <i class="fa-solid fa-arrow-up"></i> Back to Top
+        </a>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="app.js"></script>
+</body>
+
+</html>
