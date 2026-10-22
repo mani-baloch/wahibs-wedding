@@ -1705,6 +1705,22 @@ img {
   flex-wrap: wrap;
 }
 
+.venue-map-box {
+  width: 100%;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  background: var(--bg-light-alt);
+}
+
+.venue-map-box iframe {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: 380px !important;
+  border: 0;
+  display: block;
+}
+
 /* ========================================================
    SECTION 9: A FEW IMPORTANT DETAILS (FAQS)
    ======================================================== */
@@ -2183,7 +2199,9 @@ img {
    ======================================================== */
 @media screen and (max-width: 992px) {
   .events-grid,
-  .dresscode-grid {
+  .events-grid.two-column-grid,
+  .dresscode-grid,
+  .dresscode-grid.two-column-grid {
     grid-template-columns: 1fr;
     max-width: 520px;
     margin-left: auto;
@@ -2205,6 +2223,15 @@ img {
 }
 
 @media screen and (max-width: 768px) {
+  .section {
+    padding: 60px 0;
+  }
+
+  .container {
+    width: 100%;
+    padding: 0 16px;
+  }
+
   .nav-links {
     display: none;
   }
@@ -2215,7 +2242,7 @@ img {
 
   .top-floating-bar {
     top: 12px;
-    right: 14px;
+    right: 12px;
     gap: 6px;
   }
 
@@ -2224,77 +2251,620 @@ img {
     font-size: 0.75rem;
   }
 
+  /* Section Title & Subtitle */
+  .section-badge {
+    font-size: 0.72rem;
+    letter-spacing: 2.5px;
+    margin-bottom: 8px;
+  }
+
+  .section-title {
+    font-size: 2.2rem;
+    line-height: 1.2;
+    margin-bottom: 10px;
+  }
+
+  .section-subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 35px;
+    padding: 0 10px;
+  }
+
+  /* Hero Crest Badge */
+  .tilda-hero {
+    min-height: 100vh;
+    padding: 60px 16px 40px 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero-crest-container {
+    margin-top: 15px;
+  }
+
   .wreath-frame-wrapper {
-    width: 380px;
-    height: 380px;
+    width: min(340px, 86vw);
+    height: min(340px, 86vw);
+    box-shadow: 0 16px 45px rgba(0, 0, 0, 0.7), 0 0 0 2px rgba(197, 168, 128, 0.5);
   }
 
   .wreath-inner-card {
-    width: 220px;
-    height: 220px;
-    padding: 20px;
+    width: min(220px, 58vw);
+    height: min(220px, 58vw);
+    padding: 16px 12px;
+  }
+
+  .wreath-eyebrow {
+    font-size: 0.65rem;
+    letter-spacing: 1.5px;
+    margin-bottom: 4px;
   }
 
   .wreath-title {
-    font-size: 1.7rem;
+    font-size: 1.55rem;
+    margin-bottom: 4px;
   }
 
   .wreath-subtitle {
-    font-size: 0.8rem;
+    font-size: 0.74rem;
     margin-bottom: 12px;
+    line-height: 1.35;
   }
 
-  .arabic-calligraphy {
-    font-size: 2.2rem;
-  }
-
-  .couple-names {
-    font-size: 2.5rem;
-  }
-
-  .countdown-grid {
+  .tilda-pill-btn {
+    padding: 7px 16px;
+    font-size: 0.75rem;
     gap: 8px;
   }
 
+  /* Invitation & Calligraphy */
+  .bismillah-wrapper {
+    margin-bottom: 24px;
+  }
+
+  .arabic-calligraphy {
+    font-size: clamp(1.8rem, 7vw, 2.3rem);
+    line-height: 1.35;
+    margin-bottom: 10px;
+  }
+
+  .bismillah-translit {
+    font-size: 0.92rem;
+    letter-spacing: 1.5px;
+  }
+
+  .blessing-text {
+    font-size: 1.15rem;
+    line-height: 1.6;
+    padding: 0 8px;
+  }
+
+  .couple-title-card {
+    margin-bottom: 35px;
+  }
+
+  .eyebrow-tag {
+    font-size: 0.75rem;
+    letter-spacing: 2.5px;
+    margin-bottom: 10px;
+  }
+
+  .couple-names {
+    font-size: clamp(2.1rem, 7.5vw, 2.7rem);
+    line-height: 1.2;
+    margin-bottom: 12px;
+  }
+
+  .couple-names .ampersand {
+    display: inline-block;
+    margin: 0 6px;
+  }
+
+  .couple-tagline {
+    font-size: 1.05rem;
+    padding: 0 10px;
+  }
+
+  /* Date & Venue Quick Info Pill */
+  .wedding-quick-info {
+    width: 100%;
+    max-width: 440px;
+    padding: 18px 20px;
+    border-radius: var(--radius-lg);
+    flex-direction: column;
+    gap: 14px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 35px;
+  }
+
+  .info-pill {
+    width: 100%;
+    justify-content: flex-start;
+    gap: 14px;
+  }
+
+  .info-pill i {
+    font-size: 1.45rem;
+  }
+
+  .info-pill strong {
+    font-size: 0.92rem;
+  }
+
+  .info-pill-divider {
+    width: 100%;
+    height: 1px;
+    background: rgba(197, 168, 128, 0.3);
+  }
+
+  /* Countdown Clock */
+  .countdown-container {
+    padding: 24px 14px;
+    border-radius: var(--radius-md);
+    margin: 0 auto;
+    width: 100%;
+    max-width: 460px;
+  }
+
+  .countdown-heading {
+    font-size: 0.92rem;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+  }
+
+  .countdown-grid {
+    gap: 5px;
+    margin-bottom: 24px;
+  }
+
   .countdown-unit {
-    min-width: 65px;
-    padding: 10px 6px;
+    min-width: 0;
+    flex: 1;
+    padding: 10px 4px;
+    border-radius: var(--radius-sm);
   }
 
   .unit-number {
-    font-size: 2rem;
+    font-size: 1.75rem;
+    margin-bottom: 4px;
+  }
+
+  .unit-label {
+    font-size: 0.65rem;
+    letter-spacing: 1px;
+  }
+
+  .countdown-sep {
+    font-size: 1.4rem;
+    padding: 0 1px;
+  }
+
+  .invitation-actions {
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .invitation-actions .gold-outline-btn,
+  .invitation-actions .gold-filled-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 13px 20px;
+    font-size: 0.88rem;
+  }
+
+  /* Events Celebrations Cards (Baraat & Walima) */
+  .events-grid,
+  .events-grid.two-column-grid {
+    grid-template-columns: 1fr;
+    max-width: 440px;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 28px;
+  }
+
+  .event-card {
+    border-radius: var(--radius-lg);
+  }
+
+  .event-image-box {
+    height: 220px;
+  }
+
+  .event-number-tag {
+    top: 14px;
+    left: 14px;
+    width: 42px;
+    height: 42px;
+    font-size: 1.4rem;
+  }
+
+  .event-body {
+    padding: 24px 20px;
+  }
+
+  .event-tag-row {
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+
+  .event-name {
+    font-size: 1.85rem;
+    line-height: 1.25;
+  }
+
+  .event-tagline {
+    font-size: 0.92rem;
+    margin-bottom: 14px;
+  }
+
+  .event-desc {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+
+  .event-meta-list {
+    padding: 14px;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+
+  .meta-item {
+    gap: 10px;
+  }
+
+  .meta-val {
+    font-size: 0.88rem;
+  }
+
+  .event-rsvp-link {
+    padding: 12px 18px;
+    font-size: 0.88rem;
+  }
+
+  /* Wedding Timeline */
+  .timeline-stepper {
+    max-width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .timeline-stepper::before {
+    left: 19px;
+    width: 2px;
+  }
+
+  .timeline-step {
+    flex-direction: column;
+    padding-left: 48px;
+    margin-bottom: 24px;
+  }
+
+  .step-marker {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .step-dot {
+    margin-top: 4px;
+  }
+
+  .step-time {
+    text-align: left;
+    width: auto;
+    font-size: 0.88rem;
+    margin-bottom: 6px;
+    padding-top: 0;
+  }
+
+  .step-content {
+    padding: 16px 18px;
+    border-radius: var(--radius-md);
+  }
+
+  .step-icon {
+    top: 14px;
+    right: 16px;
+    font-size: 1.1rem;
+  }
+
+  .step-title {
+    font-size: 1.2rem;
+    padding-right: 30px;
+  }
+
+  .step-desc {
+    font-size: 0.85rem;
+    line-height: 1.55;
+  }
+
+  .timeline-note {
+    font-size: 0.82rem;
+    padding: 0 10px;
+  }
+
+  /* Dress Code Cards */
+  .dresscode-grid,
+  .dresscode-grid.two-column-grid {
+    grid-template-columns: 1fr;
+    max-width: 440px;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 24px;
+  }
+
+  .dress-card {
+    padding: 26px 20px;
+    border-radius: var(--radius-lg);
+  }
+
+  .dress-card-header h3 {
+    font-size: 1.75rem;
+  }
+
+  .dress-desc {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+
+  .dress-suggestions span {
+    font-size: 0.74rem;
+    padding: 4px 10px;
+  }
+
+  .dresscode-footer-note {
+    font-size: 0.95rem;
+    padding: 0 10px;
+  }
+
+  /* RSVP Form */
+  .rsvp-card-wrapper {
+    padding: 28px 18px;
+    border-radius: var(--radius-lg);
+  }
+
+  .rsvp-deadline-badge {
+    font-size: 0.8rem;
+    padding: 6px 14px;
+    margin-bottom: 25px;
+    text-align: center;
+  }
+
+  .luxury-rsvp-form {
+    gap: 18px;
   }
 
   .form-grid {
     grid-template-columns: 1fr;
+    gap: 16px;
   }
 
   .form-group.full-width {
     grid-column: span 1;
   }
 
-  .timeline-stepper::before {
-    left: 20px;
+  .form-label {
+    font-size: 0.8rem;
   }
 
-  .timeline-step {
+  .form-input,
+  .form-select,
+  .form-textarea {
+    padding: 12px 14px;
+    font-size: 0.88rem;
+  }
+
+  .radio-pill-group,
+  .checkbox-pill-group {
+    display: flex;
     flex-direction: column;
-    padding-left: 45px;
+    gap: 10px;
+    width: 100%;
   }
 
-  .step-time {
-    text-align: left;
-    width: auto;
-    margin-bottom: 6px;
+  .radio-pill,
+  .check-pill {
+    width: 100%;
+    display: block;
   }
 
-  .step-marker {
-    position: absolute;
-    left: 10px;
-    top: 0;
+  .radio-pill .pill-label,
+  .check-pill .pill-label {
+    width: 100%;
+    justify-content: flex-start;
+    padding: 11px 16px;
+    font-size: 0.84rem;
   }
 
-  .rsvp-card-wrapper {
-    padding: 30px 20px;
+  .rsvp-primary-btn,
+  .rsvp-secondary-btn {
+    width: 100%;
+    padding: 15px 18px;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    text-align: center;
+  }
+
+  .submit-note {
+    font-size: 0.78rem;
+    line-height: 1.5;
+  }
+
+  /* Venue Card & Map */
+  .venue-card {
+    grid-template-columns: 1fr;
+    padding: 24px 18px;
+    gap: 24px;
+  }
+
+  .venue-name {
+    font-size: 1.85rem;
+    line-height: 1.2;
+  }
+
+  .venue-address {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+  }
+
+  .venue-perks {
+    margin-bottom: 24px;
+    gap: 8px;
+  }
+
+  .perk {
+    font-size: 0.84rem;
+  }
+
+  .venue-btn-group {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .venue-btn-group a {
+    width: 100%;
+    justify-content: center;
+    padding: 12px 18px;
+    font-size: 0.85rem;
+  }
+
+  .venue-map-box iframe {
+    height: 280px !important;
+  }
+
+  /* FAQ Accordion */
+  .faq-question {
+    padding: 16px 18px;
+    font-size: 1.1rem;
+    gap: 12px;
+  }
+
+  .faq-question span {
+    gap: 10px;
+    font-size: 1.05rem;
+  }
+
+  .faq-answer {
+    padding: 0 18px 18px 18px;
+    font-size: 0.9rem;
+  }
+
+  .coordinator-contacts {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .contact-pill {
+    width: 100%;
+    justify-content: center;
+    padding: 11px 16px;
+  }
+
+  /* Luxury Footer */
+  .luxury-footer {
+    padding: 60px 0 30px 0;
+  }
+
+  .footer-crest-img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+  }
+
+  .footer-eyebrow {
+    font-size: 0.78rem;
+    letter-spacing: 2px;
+  }
+
+  .footer-couple-names {
+    font-size: 2rem;
+    margin-bottom: 16px;
+  }
+
+  .footer-message {
+    font-size: 0.92rem;
+    line-height: 1.6;
+    margin-bottom: 24px;
+    padding: 0 10px;
+  }
+
+  .footer-grand-callout h3 {
+    font-size: 1.4rem;
+    padding: 0 10px;
+  }
+
+  .islamic-prayer-card {
+    padding: 18px 14px;
+    margin-bottom: 30px;
+  }
+
+  .prayer-arabic {
+    font-size: 1.25rem;
+    line-height: 1.5;
+  }
+
+  .prayer-english {
+    font-size: 0.9rem;
+  }
+
+  .footer-bottom-bar {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+  }
+}
+
+/* Extra small mobile screens (<= 380px) */
+@media screen and (max-width: 380px) {
+  .wreath-frame-wrapper {
+    width: min(300px, 90vw);
+    height: min(300px, 90vw);
+  }
+
+  .wreath-inner-card {
+    width: min(190px, 60vw);
+    height: min(190px, 60vw);
+    padding: 12px 8px;
+  }
+
+  .wreath-title {
+    font-size: 1.35rem;
+  }
+
+  .wreath-subtitle {
+    font-size: 0.68rem;
+    margin-bottom: 8px;
+  }
+
+  .couple-names {
+    font-size: 1.95rem;
+  }
+
+  .countdown-unit {
+    padding: 8px 2px;
+  }
+
+  .unit-number {
+    font-size: 1.5rem;
+  }
+
+  .unit-label {
+    font-size: 0.58rem;
+    letter-spacing: 0.5px;
+  }
+
+  .countdown-sep {
+    font-size: 1.1rem;
   }
 }
